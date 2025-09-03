@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="da">
     <head>
-
+        <meta charset="UTF-8">
     </head>
     <body>
+        <p id="text">Dette er den oprindelige tekst.</p>
+        <button id="changeTextButton">Skift tekst</button>
 
+        <script>
+            const changeText = () => {
+                let originalText = document.getElementById('text');
+                
+                return originalText.innerHTML = 'Dette er den flotte nye tekst.';
+            }
+
+            let button = document.getElementById('changeTextButton');
+
+            button.addEventListener('click', changeText);
+        </script>
     </body>
 </html>
 <script src="opgaver.js"></script>

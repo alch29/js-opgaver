@@ -1,3 +1,5 @@
+//Opgaver: https://ucl.kjc.dk/webdev/intro/2025-js-exercises.html
+
 //Opg. 1:
 console.log('Opgave 1:');
 const sum = (sumArray) => {
@@ -20,7 +22,7 @@ const max = (maxArray) => {
     return biggestNumber;
 }
 
-console.log(max([1, 2, 3]));
+console.log(max([1, 2, 3, 5, 4]));
 console.log(max([1, 2, 3, 4]));
 
 
@@ -59,6 +61,27 @@ console.log(filterOdd([1, 2, 3, 4, 5]));
 //Opg. 5:
 console.log('Opgave 5:');
 
-const reverseString = () => {
-    
-}
+const reverseString = (string) => {
+    let reversedString = string.split('').reverse().join('')
+    return reversedString;
+};
+
+console.log(reverseString('JavaScript'));
+
+
+//Opg. 6:
+console.log('Opgave 6:');
+
+const flatten = (arrays) => {
+    let flattenedArray = arrays.flat();
+    return flattenedArray;
+} 
+
+console.log(flatten([[1, 2], [3, 4], [5]]));
+
+
+//Opg. 7:
+console.log('Opgave 7:');
+
+//Kig i opgaver.html :))
+
