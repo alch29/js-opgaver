@@ -81,7 +81,52 @@ console.log(flatten([[1, 2], [3, 4], [5]]));
 
 
 //Opg. 7:
-console.log('Opgave 7:');
+const changeText = () => {
+    let originalText = document.getElementById('text');
+    
+    return originalText.innerHTML = 'Dette er den flotte nye tekst.';
+}
 
-//Kig i opgaver.html :))
+let button = document.getElementById('changeTextButton');
 
+button.addEventListener('click', changeText);
+
+
+//Opg. 8:
+let clickCountBtn = document.getElementById('clickButton');
+let clickCountSpan = document.getElementById('clickCount');
+let clickCount = 0;
+
+clickCountBtn.onclick = function () {
+    clickCount++;
+    clickCountSpan.innerHTML = clickCount;
+}
+
+//Opg. 9:
+
+//Første forsøg:
+let addItemBtn = document.getElementById('addItemButton');
+let listOfItems = document.getElementById('itemList');
+
+const addItemToList = () => {
+    let inputElement = document.getElementById('itemInput');
+    let inputValue = inputElement.value;
+    let listItemElement = document.createElement('li');
+    let inputNode = document.createTextNode(inputValue);
+    listItemElement.appendChild(inputNode);
+
+    listOfItems.appendChild(listItemElement);
+
+    inputValue = '';
+}
+
+addItemBtn.addEventListener('click', addItemToList);
+
+//Andet forsøg:
+document.getElementById('addItemButton').onclick = function() {
+    let text = document.getElementById('itemInput').value; 
+    let li = document.createElement('li');
+    li.textContent = text;
+    document.getElementById('itemList').appendChild(li);
+    document.getElementById('itemInput').value = "";
+  }

@@ -7,17 +7,17 @@
         <p id="text">Dette er den oprindelige tekst.</p>
         <button id="changeTextButton">Skift tekst</button>
 
-        <script>
-            const changeText = () => {
-                let originalText = document.getElementById('text');
-                
-                return originalText.innerHTML = 'Dette er den flotte nye tekst.';
-            }
+        <p>Antal klik: <span id="clickCount">0</span></p>
+        <button id="clickButton">Klik mig</button>
 
-            let button = document.getElementById('changeTextButton');
+        <br>
+        <br>
 
-            button.addEventListener('click', changeText);
-        </script>
+        <input type="text" id="itemInput" placeholder="Skriv noget...">
+        <button id="addItemButton">Tilføj</button>
+
+        <ul id="itemList"></ul>
+        
     </body>
 </html>
 <script src="opgaver.js"></script>
