@@ -130,3 +130,15 @@ document.getElementById('addItemButton').onclick = function() {
     document.getElementById('itemList').appendChild(li);
     document.getElementById('itemInput').value = "";
   }
+
+
+//Opg. 10:
+const changeColorBtn = document.getElementById('changeColorButton');
+const background = document.getElementById('body');
+
+const generateColor = () => {
+    let hex = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    background.style.backgroundColor = hex;
+}  
+
+changeColorBtn.addEventListener('click', generateColor);
