@@ -2,3 +2,72 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#errorMessage {
+    color: red;
+}
+
+body {
+    height: 100vh;
+}
+
+#body {
+    padding: 40px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    background-color: oldlace;
+    padding: 18px;
+    border: solid 1px chocolate;
+    border-radius: 6px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+button {
+    background-color: chocolate;
+    border: solid 1px chocolate;
+    border-radius: 40px;
+    padding: 6px 18px;
+    color: oldlace;
+    box-shadow: 2px 2px 4px moccasin;
+    cursor: pointer;
+    transition: 0.2s;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: moccasin;
+    color: chocolate;
+}
+
+p, li, input, label {
+    font-family: "Montserrat", sans-serif;
+    color: indigo;
+}
+
+.small-text {
+    font-size: 12px;
+    color: mediumpurple;
+}
+
+input {
+    border-radius: 40px;
+    border: solid 1px chocolate;
+    padding: 6px 18px;
+}
+
+#myForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

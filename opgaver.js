@@ -123,13 +123,13 @@ const addItemToList = () => {
 addItemBtn.addEventListener('click', addItemToList);
 
 //Andet forsøg:
-document.getElementById('addItemButton').onclick = function() {
-    let text = document.getElementById('itemInput').value; 
-    let li = document.createElement('li');
-    li.textContent = text;
-    document.getElementById('itemList').appendChild(li);
-    document.getElementById('itemInput').value = "";
-  }
+// document.getElementById('addItemButton').onclick = function() {
+//     let text = document.getElementById('itemInput').value; 
+//     let li = document.createElement('li');
+//     li.textContent = text;
+//     document.getElementById('itemList').appendChild(li);
+//     document.getElementById('itemInput').value = "";
+//   }
 
 
 //Opg. 10:
@@ -142,3 +142,27 @@ const generateColor = () => {
 }  
 
 changeColorBtn.addEventListener('click', generateColor);
+
+
+//Opg. 11:
+const submitBtn = document.getElementById('submit');
+
+const validateForm = () => {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const error = document.getElementById('errorMessage');
+
+    let isValid = true;
+
+    if (name === "" || /\d/.test(name)) {
+        error.textContent = "Venligst indtast dit navn rigtigt.";
+        isValid = false;
+    }
+
+    if (email === "" || !email.includes("@") || !email.includes(".")) {
+        error.textContent = "Venligst indtast en gyldig E-mail adresse.";
+        isValid = false;
+    }
+}
+
+submitBtn.addEventListener('click', validateForm);

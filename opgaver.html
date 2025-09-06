@@ -3,24 +3,49 @@
     <head>
         <meta charset="UTF-8">
         <link href="opgaver.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="body">
-            <p id="text">Dette er den oprindelige tekst.</p>
-            <button id="changeTextButton">Skift tekst</button>
 
-            <p>Antal klik: <span id="clickCount">0</span></p>
-            <button id="clickButton">Klik mig</button>
-
-            <br>
-            <br>
-
-            <input type="text" id="itemInput" placeholder="Skriv noget...">
-            <button id="addItemButton">Tilføj</button>
-
-            <ul id="itemList"></ul>
-
-            <button id="changeColorButton">Skift baggrundsfarve</button>
+            <div class="box">
+                <p class="small-text">Opgave 7:</p>
+                <p id="text">Dette er den oprindelige tekst.</p>
+                <button id="changeTextButton">Skift tekst</button>
+            </div>
+            <div class="box">
+                <p class="small-text">Opgave 8:</p>
+                <p>Antal klik: <span id="clickCount">0</span></p>
+                <button id="clickButton">Klik mig</button>
+            </div>
+            <div class="box">
+                <p class="small-text">Opgave 9:</p>
+                <input type="text" id="itemInput" placeholder="Skriv noget...">
+                <button id="addItemButton">Tilføj</button>
+                <ul id="itemList"></ul>
+            </div>
+            <div class="box">
+                <p class="small-text">Opgave 10:</p>
+                <button id="changeColorButton">Skift baggrundsfarve</button>
+            </div>
+            <div class="box">
+                <p class="small-text">Opgave 11:</p>
+                <form id="myForm">
+                    <div>
+                        <label for="name">Navn:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    </div>
+                    <button id="submit" type="submit">Submit</button>
+                </form>
+                <p id="errorMessage"></p>
+            </div>
+            
         </div>
     </body>
 </html>
